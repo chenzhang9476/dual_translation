@@ -8,7 +8,7 @@ results must be restored separately from approved storage.
 ```bash
 mkdir -p /workspace/projects
 cd /workspace/projects
-git clone <REPOSITORY_URL> dual_translation
+git clone https://github.com/chenzhang9476/dual_translation.git
 cd dual_translation
 ```
 

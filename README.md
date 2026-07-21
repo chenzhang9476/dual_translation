@@ -42,7 +42,7 @@ and CUDA 12.1 in the provided Docker image.
 Native Python setup:
 
 ```bash
-git clone <REPOSITORY_URL> dual_translation
+git clone https://github.com/chenzhang9476/dual_translation.git
 cd dual_translation
 python3 -m venv .venv
 source .venv/bin/activate
