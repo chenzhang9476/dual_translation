@@ -1,0 +1,56 @@
+(FixedInternalImagePixelType "float")
+(MovingInternalImagePixelType "float")
+(FixedImageDimension 3)
+(MovingImageDimension 3)
+(UseDirectionCosines "true")
+
+// **************** Main Components **************************
+
+(Registration "MultiResolutionRegistration")
+(Interpolator "BSplineInterpolator")
+(ResampleInterpolator "FinalBSplineInterpolator")
+(Resampler "DefaultResampler")
+
+(FixedImagePyramid "FixedSmoothingImagePyramid")
+(MovingImagePyramid "MovingSmoothingImagePyramid")
+
+(Optimizer "AdaptiveStochasticGradientDescent")
+(Transform "BSplineTransform")
+(Metric "DisplacementMagnitudePenalty")
+
+// ***************** Transformation **************************
+(HowToCombineTransforms "Compose")
+(FinalGridSpacingInPhysicalUnits 15)
+
+// ******************* Similarity measure *********************
+(NumberOfHistogramBins 128) // OPTIMIZED BY QUANTITATIVE MEASURES
+
+// ******************** Multiresolution **********************
+(NumberOfResolutions 3)
+(ImagePyramidSchedule 8 8 8  4 4 4  1 1 1)
+
+// ******************* Optimizer ****************************
+(MaximumNumberOfIterations 1000 1000 1000) // COULD PROBABLY BE LOWERED, ESPECIALLY FOR THE FIRST LEVELS OF THE IMAGE PYRAMID
+
+// **************** Image sampling **********************
+(Sampler "RandomSampler")
+(NumberOfSpatialSamples 4096)
+(NewSamplesEveryIteration "true")
+(ImageSampler "Random")
+(SampleRegionSize 140) 
+(UseRandomSampleRegion "true")
+(MaximumNumberOfSamplingAttempts 5)
+(RequiredRatioOfValidSamples 0.05)
+
+// ************* Interpolation and Resampling ****************
+
+(BSplineInterpolationOrder 3)
+(FinalBSplineInterpolationOrder 3)
+
+(ShowExactMetricValue "false") 
+(WriteTransformParametersEachResolution "true")
+//(WriteResultImageAfterEachResolution "true")
+//(WritePyramidImagesAfterEachResolution "true")
+
+(DefaultPixelValue 0)
+(WriteResultImage "false")

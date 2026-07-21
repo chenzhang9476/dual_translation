@@ -1,0 +1,18 @@
+services:
+  synthrad:
+    build:
+      context: .
+    volumes:
+      # path to data directory
+      - /path/to/data/:/data
+      # path to pre-processing code
+      - ../:/code
+    command: tail -F anything
+    shm_size: '2gb'
+    deploy:
+      resources:
+        reservations:
+          devices:
+          - driver: nvidia
+            count: 'all'
+            capabilities: [gpu]

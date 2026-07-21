@@ -1,0 +1,61 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Environments and local configuration
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+.config/
+
+# Editors and operating systems
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Experiment tracking and generated outputs
+logs/
+results/
+runs/
+wandb/
+tensorboard/
+
+# Model weights are distributed separately from the source repository.
+checkpoints/
+*.pth
+*.pt
+*.ckpt
+*.onnx
+
+# SynthRAD data are not stored in Git.
+dataset/synthRAD2025_Task1_Train/
+dataset/synthRAD2025_Task1_Train_process/
+dataset/synthRAD2025_Task1_Train_processed/
+dataset/synthRAD2025_Task2_Train/
+dataset/synthRAD2025_Task2_Train_process/
+dataset/synthRAD2025_Task2_Train_processed/
+*.nii
+*.nii.gz
+*.nrrd
+*.mha
+*.mhd
+*.dcm
+*.npy
+*.npz
+
+# Build and packaging artifacts
+build/
+dist/
+*.egg-info/
+*.zip
+*.tar
+*.tar.gz
