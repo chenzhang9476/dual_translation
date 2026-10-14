@@ -3,6 +3,9 @@
 DualTranslation is a dual-frequency diffusion pipeline for medical image
 translation on SynthRAD data. This repository contains the maintained training,
 2D inference, 3D reconstruction, preprocessing, and baseline source code.
+The paper is published online: 
+
+stochastic high-frequency modeling for uncertainty-aware synthetic ct generation in radiotherapy
 
 > This is a source-only repository. Patient data, model checkpoints, experiment
 > outputs, and logs are intentionally excluded from Git. Keep those artifacts in
